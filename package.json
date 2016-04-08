@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "awesome-typescript-loader": "^0.17.0-rc.5",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
