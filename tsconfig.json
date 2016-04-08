@@ -1,0 +1,25 @@
+{
+  "version": "1.8.9",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": "usingES6/",
+    "sourceMap": true,
+    "target": "es2015",
+    "declaration": false,
+    "noImplicitAny": false,
+    "noResolve": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "filesGlob": [
+    "./usingES6/**/*.ts",
+    "./typings/browser.d.ts"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+     "useBabel": true // use when target ES6
+  }
+}
