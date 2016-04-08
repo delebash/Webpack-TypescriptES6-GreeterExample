@@ -2,7 +2,7 @@ var path = require('path');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const webpack = require("webpack");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer')
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: './usingES6/app.ts',
