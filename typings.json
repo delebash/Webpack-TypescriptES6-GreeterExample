@@ -1,7 +1,8 @@
 {
   "ambientDependencies": {
-    "jquery": "registry:dt/jquery#1.10.0+20160316155526",
-    "moment-node": "registry:dt/moment-node#2.11.1+20160329220348"
+    "jquery": "registry:dt/jquery#1.10.0+20160316155526"
   },
-  "dependencies": {}
+  "dependencies": {
+    "moment": "registry:npm/moment#2.10.5+20160211003958"
+  }
 }

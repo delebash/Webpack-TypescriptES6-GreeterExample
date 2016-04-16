@@ -1,4 +1,6 @@
-import moment from 'momen-node';
+//importing moment fails
+
+import moment from 'moment';
 
 class DateTime {
     toString() {
