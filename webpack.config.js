@@ -3,12 +3,16 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const webpack = require("webpack");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-
 module.exports = {
-    entry: './usingES6/app.ts',
+    entry: {
+        main: [
+            './usingES6/app'
+        ]
+    },
     output: {
         path: path.join(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        sourceMapFilename: "bundle.js.map"
     },
     resolve: {
         extensions: ['', '.js', '.ts']
@@ -42,7 +46,7 @@ module.exports = {
             { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url', query: { limit: 10000, mimetype: 'application/font-woff2' } },
             { test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url', query: { limit: 10000, mimetype: 'application/font-woff' } },
             { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file' },
-            { test: /\.scss$/, loader: 'style!css?sourceMap!postcss!sass?sourceMap'}
+            // { test: /\.scss$/, loader: 'style!css?sourceMap!postcss!sass?sourceMap'}
         ]
     },
     postcss: [
@@ -51,8 +55,6 @@ module.exports = {
         })
     ],
     sassLoader: {
-  includePaths: [path.resolve(__dirname, "./sass")]
+        includePaths: [path.resolve(__dirname, "./sass")]
     }
 };
-
-
