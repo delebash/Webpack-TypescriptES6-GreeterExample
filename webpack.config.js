@@ -6,13 +6,12 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: {
         main: [
-            './usingES6/greets'
+            './usingES6/greeter'
         ]
     },
     output: {
         path: path.join(__dirname, 'build'),
-        filename: 'bundle.js',
-        sourceMapFilename: "bundle.js.map"
+        filename: 'bundle.js'
     },
     resolve: {
         extensions: ['', '.js', '.ts']
@@ -38,8 +37,13 @@ module.exports = {
             modulesDirectories: ['node_modules']
         },
         loaders: [
+            // Extract CSS during build
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+            },
             //You still need css for files that are not .scss but jus .css
-            { test: /\.css?$/, loader: 'style!css' },
+           // { test: /\.css?$/, loader: 'style!css' },
             {test: /\.ts$/, loader: 'awesome-typescript', exclude: [/\.(spec|e2e)\.ts$/, /node_modules/]},
             { test: /\.html$/, loader: 'html' },
             { test: /\.(png|gif|jpg)$/, loader: 'url', query: { limit: 8192 } },
