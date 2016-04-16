@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: {
         main: [
-            './usingES6/app'
+            './usingES6/greets'
         ]
     },
     output: {
